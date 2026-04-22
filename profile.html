@@ -1,16 +1,146 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            profile
-        </title>
-    </head>
-    <body>
-        <h1>DAVID BECKHAM</h1>
-        <table border="1"cellspacing="0" cellpadding="10">
-            <td><a href="index.html">home</a></td>
-            <td><a href="profile.html">profile</a></td>
-            <td><a href="contact.html">contact</a></td>
-            <td><a href="mahasiswa.html">mahasiswa</td>
-        </table>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Beckham | Profil</title>
+    <style>
+        /* CSS Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container Utama (Dibuat konsisten ukurannya dengan index.html) */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        /* --- STYLING HEADER & NAVIGASI --- */
+        .site-header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .site-title {
+            font-family: "Playfair Display", "Times New Roman", serif;
+            font-size: 42px;
+            font-weight: normal;
+            color: #111;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .site-nav a {
+            text-decoration: none;
+            color: #777;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .site-nav a:hover, .site-nav a.active {
+            color: #000;
+            border-bottom: 2px solid #000;
+        }
+        /* --------------------------------- */
+
+        /* Judul Setiap Bagian (Biodata, Karir, dll) */
+        .section-title {
+            font-size: 14px;
+            color: #111;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        /* Styling List Item Profil */
+        ul.profile-list {
+            list-style-type: none;
+            margin-left: 10px;
+        }
+
+        ul.profile-list li {
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        ul.profile-list strong {
+            color: #000;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="site-header">
+            <h1 class="site-title">DAVID BECKHAM</h1>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="profile.html" class="active">Profile</a>
+                <a href="contact.html">Contact</a>
+                <a href="mahasiswa.html">Mahasiswa</a>
+            </nav>
+        </header>
+
+        <div class="profile-details">
+            <h2 class="section-title">Biodata Dasar</h2>
+            <ul class="profile-list">
+                <li><strong>Nama Lengkap:</strong> David Robert Joseph Beckham</li>
+                <li><strong>Tanggal Lahir:</strong> 2 Mei 1975 (London, Inggris)</li>
+                <li><strong>Pasangan:</strong> Victoria Beckham (menikah tahun 1999)</li>
+            </ul>
+
+            <h2 class="section-title">Karir Sepak Bola</h2>
+            <ul class="profile-list">
+                <li><strong>Klub Utama:</strong> Memulai karir profesionalnya di Manchester United, di mana ia meraih kesuksesan besar dengan memenangkan 6 gelar Liga Premier, 2 Piala FA, dan Liga Champions UEFA pada tahun 1999.</li>
+                <li><strong>Perjalanan Global:</strong> Bermain untuk klub-klub raksasa dunia lainnya seperti Real Madrid (Spanyol), LA Galaxy (Amerika Serikat), AC Milan (Italia), dan menutup karirnya di Paris Saint-Germain (Prancis) sebelum pensiun pada tahun 2013.</li>
+                <li><strong>Timnas Inggris:</strong> Membuat 115 penampilan untuk Tim Nasional Inggris dan menjabat sebagai kapten selama enam tahun.</li>
+                <li><strong>Gaya Bermain:</strong> Dikenal luas sebagai salah satu gelandang terbaik di generasinya, terutama karena akurasi umpan silang dan keahlian tendangan bebas yang melengkung tajam.</li>
+            </ul>
+
+            <h2 class="section-title">Kehidupan Pasca-Pensiun & Bisnis</h2>
+            <ul class="profile-list">
+                <li><strong>Ikon Global:</strong> Bukan hanya seorang atlet, tetapi juga ikon budaya pop, fashion, dan brand ambassador untuk berbagai merek global ternama.</li>
+                <li><strong>Pemilik Klub:</strong> Saat ini menjabat sebagai Presiden dan salah satu pemilik dari klub sepak bola Inter Miami CF (MLS), serta memiliki saham di klub Inggris, Salford City.</li>
+                <li><strong>Filantropi:</strong> Aktif dalam kegiatan sosial dan telah menjadi Duta Kehormatan UNICEF sejak tahun 2005, dengan fokus membantu anak-anak di seluruh dunia.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

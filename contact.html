@@ -1,17 +1,285 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            contact
-        </title>
-    </head>
-    <body>
-        <h1>DAVID BECKHAM</h1>
-        <table border="1"cellspacing="0" cellpadding="10">
-            <td><a href="index.html">home</a></td>
-            <td><a href="profile.html">profile</a></td>
-            <td><a href="contact.html">contact</a></td>
-            <td><a href="mahasiswa.html">mahasiswa</td>
-        </table>
-        <hr/>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Beckham | Contact</title>
+    <style>
+        /* CSS Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        /* --- STYLING HEADER & NAVIGASI --- */
+        .site-header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .site-title {
+            font-family: "Playfair Display", "Times New Roman", serif;
+            font-size: 42px;
+            font-weight: normal;
+            color: #111;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .site-nav a {
+            text-decoration: none;
+            color: #777;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .site-nav a:hover, .site-nav a.active {
+            color: #000;
+            border-bottom: 2px solid #000;
+        }
+        /* --------------------------------- */
+
+        /* Membatasi lebar form agar tidak terlalu memanjang ke kanan */
+        .form-wrapper {
+            max-width: 700px; 
+        }
+
+        /* Deskripsi Form */
+        .description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Form Grup */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        /* Label Form */
+        label {
+            display: block;
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* Input dan Textarea */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #ccc;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #111;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        /* Checkbox Syarat & Ketentuan */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 12px;
+            color: #888;
+            letter-spacing: 0.5px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .checkbox-group a {
+            color: #555;
+            text-decoration: underline;
+            margin-left: 4px;
+        }
+
+        /* Mockup Kotak reCAPTCHA */
+        .recaptcha-mockup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 300px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #d3d3d3;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 4px rgba(0,0,0,0.05);
+        }
+
+        .recaptcha-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .recaptcha-left input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .recaptcha-left span {
+            font-size: 14px;
+            color: #222;
+        }
+
+        .recaptcha-right {
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+        }
+
+        .recaptcha-right img {
+            width: 30px;
+            display: block;
+            margin: 0 auto 5px auto;
+        }
+
+        .recaptcha-links a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .recaptcha-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tombol Submit */
+        .submit-btn {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            padding: 14px 30px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #444; 
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="site-header">
+            <h1 class="site-title">DAVID BECKHAM</h1>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="mahasiswa.html">Mahasiswa</a>
+            </nav>
+        </header>
+
+        <div class="form-wrapper">
+            <p class="description">For enquiries please use the form below. Please note that due to the volume of submissions we cannot guarantee a response.</p>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullname">*Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">*Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">*Message</label>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" style="display:inline; margin:0; font-weight:normal; color:#777; font-size: 12px;">I ACCEPT THE</label>
+                    <a href="#">TERMS AND CONDITIONS</a>
+                </div>
+
+                <div class="recaptcha-mockup">
+                    <div class="recaptcha-left">
+                        <input type="checkbox" id="robot" name="robot">
+                        <label for="robot" style="display:inline; margin:0; font-weight:normal; color:#222; font-size: 14px;">I'm not a robot</label>
+                    </div>
+                    <div class="recaptcha-right">
+                        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo">
+                        <div class="recaptcha-links">
+                            <a href="#">Privacy</a> - <a href="#">Terms</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">SUBMIT MESSAGE</button>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
