@@ -1,0 +1,253 @@
+/* --- Reset & Base Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1a1a1a;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+    --accent-color: #d4af37; /* Aksen emas */
+    --border-color: #333;
+}
+
+body.home-page {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- HEADER & NAVIGASI --- */
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover, .site-nav a.active {
+    color: #fff;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.hero-subtitle {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.hero-text p {
+    font-size: 1.05rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.hero-text strong {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* Styling Gambar Sinematik */
+.hero-visual {
+    flex: 1;
+    position: relative;
+}
+
+.image-frame {
+    position: relative;
+    padding: 10px;
+    background: #111;
+    border: 1px solid var(--border-color);
+    box-shadow: 15px 15px 0px rgba(212, 175, 55, 0.1); /* Efek bayangan kotak emas */
+    transition: transform 0.4s ease;
+}
+
+.image-frame:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 20px 20px 0px rgba(212, 175, 55, 0.2);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 60px 0;
+}
+
+/* --- ACHIEVEMENTS GRID --- */
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.achievement-card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 4px;
+    border-top: 3px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    border-top-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.achievement-card h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.achievements-list {
+    list-style: none;
+}
+
+.achievements-list li {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.achievements-list li::before {
+    content: "✦"; /* Ikon bintang kecil untuk list */
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 0.8rem;
+}
+
+.achievements-list strong {
+    color: #eee;
+    font-weight: 600;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    border: 1px solid #333;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .site-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+}

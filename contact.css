@@ -1,0 +1,289 @@
+/* --- Reset & Base Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+    --accent-color: #d4af37; /* Warna emas premium */
+    --border-color: #333;
+    --input-bg: #1a1a1a;
+}
+
+body.contact-page {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- HEADER & NAVIGASI (Sama dengan Profile) --- */
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover, .site-nav a.active {
+    color: #fff;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- TATA LETAK KONTAK (2 Kolom) --- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Kolom kiri lebih kecil dari kanan */
+    gap: 60px;
+    align-items: start;
+}
+
+/* --- INFORMASI KONTAK (Kiri) --- */
+.contact-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.info-details {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item strong {
+    display: block;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- FORM KONTAK (Kanan) --- */
+.contact-form-wrapper {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 3px solid var(--accent-color);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px 15px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #555;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Checkbox & Terms */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.checkbox-group a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* Mockup reCAPTCHA Gelap */
+.recaptcha-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    padding: 15px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.recaptcha-left {
+    display: flex;
+    align-items: center;
+}
+
+.recaptcha-left input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.recaptcha-left label {
+    font-size: 0.9rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.recaptcha-right {
+    text-align: center;
+    font-size: 0.65rem;
+    color: #888;
+}
+
+.recaptcha-right img {
+    width: 28px;
+    display: block;
+    margin: 0 auto 5px auto;
+    opacity: 0.8;
+}
+
+.recaptcha-links a {
+    color: #888;
+    text-decoration: none;
+}
+
+.recaptcha-links a:hover {
+    color: #ccc;
+}
+
+/* Tombol Submit */
+.submit-btn {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 14px 35px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 800px) {
+    .contact-layout {
+        grid-template-columns: 1fr; /* Berubah jadi 1 kolom (atas-bawah) di HP */
+        gap: 40px;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

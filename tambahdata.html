@@ -1,124 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Mahasiswa</title>
+    <title>David Beckham | Tambah Data</title>
+    <link rel="stylesheet" href="tambahdata.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h2>Tambah Data</h2>
-    <form action="mahasiswa.html" method="post">
-        <table cellpadding="5px">
-            <tr>
-                <td><label for="nama">Nama:</label></td>
-                <td><input type="text" id="nama" name="nama"></td>
-            </tr>
-            <tr>
-                <td><label for="foto">Foto:</label></td>
-                <td><input type="file" id="foto" name="foto"></td>
-            </tr>
-            <tr>
-                <td><label for="uts">Nilai UTS:</label></td>
-                <td><input type="number" id="uts" name="Nilai UTS"></td>
-            </tr>
-            <tr>
-                <td><label for="uas">Nilai UAS:</label></td>
-                <td><input type="number" id="uas" name="Nilai UAS"></td>
-            </tr>
-            <tr>
-                <td><label for="tugas">Nilai Tugas:</label></td>
-                <td><input type="number" id="tugas" name="Nilai Tugas"></td>
-            </tr>
-        </table>
-        <br>
-        <button type="submit">Tambah</button>
-    </form>
-    <br>
-    <hr>
+<body class="tambah-page">
 
-    <h2>Form Mahasiswa</h2>
-    <form action="mahasiswa.html" method="post">
-        <table cellpadding="5px">
-            <tr>
-                <td><label for="nama_mhs">Nama:</label></td>
-                <td><input type="text" id="nama_mhs" name="nama_mhs"></td>
-            </tr>
-            <tr>
-                <td><label for="nim">NIM:</label></td>
-                <td><input type="number" id="nim" name="nim"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password:</label></td>
-                <td><input type="password" id="password" name="password"></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email:</label></td>
-                <td><input type="email" id="email" name="email"></td>
-            </tr>
-            <tr>
-                <td><label for="nohp">No HP:</label></td>
-                <td><input type="tel" id="nohp" name="nohp"></td>
-            </tr>
-            <tr>
-                <td><label for="website">Website pribadi:</label></td>
-                <td><input type="url" id="website" name="website"></td>
-            </tr>
-            <tr>
-                <td><label for="tgl_lahir">Tanggal lahir:</label></td>
-                <td><input type="date" id="tgl_lahir" name="tgl_lahir"></td>
-            </tr>
-            <tr>
-                <td><label for="warna">Warna favorit:</label></td>
-                <td><input type="color" id="warna" name="warna"></td>
-            </tr>
-            <tr>
-                <td><label for="kepuasan">Tingkat kepuasan:</label></td>
-                <td><input type="range" id="kepuasan" name="kepuasan" min="1" max="100"></td>
-            </tr>
-            <tr>
-                <td><label>Jenis kelamin:</label></td>
-                <td>
-                    <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
-                    <label for="pria">Pria</label>
-                    <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
-                    <label for="wanita">Wanita</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label>Hobi:</label></td>
-                <td>
-                    <input type="checkbox" id="hobi1" name="hobi" value="Membaca">
-                    <label for="hobi1">Membaca</label><br>
-                    <input type="checkbox" id="hobi2" name="hobi" value="Olahraga">
-                    <label for="hobi2">Olahraga</label><br>
-                    <input type="checkbox" id="hobi3" name="hobi" value="Bermain Musik">
-                    <label for="hobi3">Bermain Musik</label><br>
-                    <input type="checkbox" id="hobi4" name="hobi" value="Gaming">
-                    <label for="hobi4">Gaming</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="upload_foto">Upload foto:</label></td>
-                <td><input type="file" id="upload_foto" name="upload_foto"></td>
-            </tr>
-            <tr>
-                <td><label for="alamat">Alamat:</label></td>
-                <td><textarea id="alamat" name="alamat" rows="3" cols="22"></textarea></td>
-            </tr>
-            <tr>
-                <td><label for="jurusan">Jurusan:</label></td>
-                <td>
-                    <select id="jurusan" name="jurusan">
-                        <option value="">-- Pilih Jurusan --</option>
-                        <option value="Sistem Informasi">Sistem Informasi</option>
-                        <option value="Teknik Informatika">Teknik Informatika</option>
-                        <option value="Kecerdasan Buatan">Kecerdasan Buatan</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        
+        <header class="site-header">
+            <h1 class="site-title">DAVID BECKHAM</h1>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="contact.html">Contact</a>
+                <a href="mahasiswa.html">Mahasiswa</a>
+            </nav>
+        </header>
+
+        <main class="form-layout">
+            
+            <section class="form-section">
+                <h2 class="section-title">Tambah Data Nilai</h2>
+                <form action="mahasiswa.html" method="post" class="custom-form">
+                    
+                    <div class="form-group">
+                        <label for="nama">Nama Mahasiswa</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto">Upload Foto</label>
+                        <input type="file" id="foto" name="foto" class="file-input">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="uts">Nilai UTS</label>
+                            <input type="number" id="uts" name="uts" placeholder="0 - 100">
+                        </div>
+                        <div class="form-group">
+                            <label for="uas">Nilai UAS</label>
+                            <input type="number" id="uas" name="uas" placeholder="0 - 100">
+                        </div>
+                        <div class="form-group">
+                            <label for="tugas">Nilai Tugas</label>
+                            <input type="number" id="tugas" name="tugas" placeholder="0 - 100">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Simpan Data Nilai</button>
+                </form>
+            </section>
+
+            <hr class="divider">
+
+            <section class="form-section">
+                <h2 class="section-title">Form Biodata Mahasiswa</h2>
+                <form action="mahasiswa.html" method="post" class="custom-form">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nama_mhs">Nama Lengkap</label>
+                            <input type="text" id="nama_mhs" name="nama_mhs" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nim">NIM</label>
+                            <input type="number" id="nim" name="nim" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password Portal</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nohp">No. Handphone</label>
+                            <input type="tel" id="nohp" name="nohp">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website / Portofolio</label>
+                            <input type="url" id="website" name="website" placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tgl_lahir">Tanggal Lahir</label>
+                            <input type="date" id="tgl_lahir" name="tgl_lahir">
+                        </div>
+                        <div class="form-group">
+                            <label for="jurusan">Jurusan</label>
+                            <select id="jurusan" name="jurusan">
+                                <option value="">-- Pilih Jurusan --</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                <option value="Teknik Informatika">Teknik Informatika</option>
+                                <option value="Kecerdasan Buatan">Kecerdasan Buatan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">Alamat Domisili</label>
+                        <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap..."></textarea>
+                    </div>
+
+                    <div class="form-options-row">
+                        <div class="form-group radio-group">
+                            <label>Jenis Kelamin</label>
+                            <div class="options">
+                                <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
+                                <label for="pria">Pria</label>
+                                
+                                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+                                <label for="wanita">Wanita</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group visual-inputs">
+                            <div>
+                                <label for="warna">Warna Profil</label>
+                                <input type="color" id="warna" name="warna" value="#d4af37">
+                            </div>
+                            <div>
+                                <label for="kepuasan">Tingkat Kepuasan</label>
+                                <input type="range" id="kepuasan" name="kepuasan" min="1" max="100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>Hobi / Minat</label>
+                        <div class="hobi-options">
+                            <div><input type="checkbox" id="hobi1" name="hobi" value="Membaca"><label for="hobi1">Membaca</label></div>
+                            <div><input type="checkbox" id="hobi2" name="hobi" value="Olahraga"><label for="hobi2">Olahraga</label></div>
+                            <div><input type="checkbox" id="hobi3" name="hobi" value="Bermain Musik"><label for="hobi3">Bermain Musik</label></div>
+                            <div><input type="checkbox" id="hobi4" name="hobi" value="Gaming"><label for="hobi4">Gaming</label></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Kirim Biodata</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
 </body>
 </html>

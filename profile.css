@@ -1,0 +1,196 @@
+/* --- Reset & Base Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+    --accent-color: #d4af37; /* Warna aksen ala vintage/premium */
+    --border-color: #333;
+}
+
+body.profile-page {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- Header --- */
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover, .site-nav a.active {
+    color: #fff;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- Layout Profil --- */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* --- Bagian Kiri (Visual) --- */
+.polaroid-frame {
+    background: #fff;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    transform: rotate(-2deg); /* Memberikan kesan vintage polaroid */
+    transition: transform 0.3s ease;
+}
+
+.polaroid-frame:hover {
+    transform: rotate(0deg);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(40%) contrast(120%); /* Efek sinematik */
+}
+
+.polaroid-caption {
+    color: #111;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.quick-facts h3 {
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.quick-facts ul {
+    list-style: none;
+}
+
+.quick-facts li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.quick-facts strong {
+    color: #fff;
+}
+
+/* --- Bagian Kanan (Detail) --- */
+.detail-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.narrative-text {
+    font-size: 1.05rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Grid Cards untuk info tambahan */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-left: 3px solid var(--accent-color);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- Responsif untuk Mobile --- */
+@media (max-width: 768px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .polaroid-frame {
+        max-width: 300px;
+        margin: 0 auto 30px auto;
+    }
+}

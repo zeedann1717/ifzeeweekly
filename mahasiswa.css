@@ -1,0 +1,232 @@
+/* --- Reset & Base Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+    --accent-color: #d4af37; /* Aksen emas premium */
+    --border-color: #333;
+}
+
+body.mahasiswa-page {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- HEADER & NAVIGASI --- */
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover, .site-nav a.active {
+    color: #fff;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- BAGIAN UMUM --- */
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 60px 0;
+}
+
+/* --- SECTION DATA MAHASISWA --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.add-btn {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* Styling Tabel Utama */
+.table-container {
+    overflow-x: auto;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid var(--border-color);
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.styled-table thead tr {
+    background-color: #111;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.styled-table th.nilai-header {
+    border-bottom: 1px solid #444; /* Pemisah khusus untuk header Nilai */
+}
+
+.styled-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #252525;
+}
+
+.styled-table td strong {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Styling Foto Avatar */
+.avatar {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--accent-color);
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- SECTION LATIHAN TABEL --- */
+.latihan-section {
+    text-align: center;
+}
+
+.latihan-container {
+    display: flex;
+    justify-content: center;
+}
+
+.latihan-table {
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.latihan-table td {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.latihan-table td:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Styling Khusus Kotak MID */
+.latihan-table td.mid-cell {
+    background: linear-gradient(145deg, #1a1a1a, #000);
+    color: var(--accent-color);
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 2px solid var(--accent-color);
+}
+
+.latihan-table td.mid-cell:hover {
+    background: linear-gradient(145deg, #222, #111);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,281 @@
+/* --- Reset & Base Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+    --accent-color: #d4af37;
+    --border-color: #333;
+    --input-bg: #151515;
+}
+
+body.tambah-page {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- HEADER & NAVIGASI --- */
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- AREA FORM --- */
+.form-section {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 3px solid var(--accent-color);
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 50px 0;
+}
+
+/* --- STYLING INPUT --- */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #fff;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #555;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.file-input {
+    background-color: transparent;
+    padding: 10px 0;
+    color: var(--text-muted);
+}
+
+/* --- RADIO & CHECKBOX --- */
+.form-options-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.options input[type="radio"],
+.hobi-options input[type="checkbox"] {
+    accent-color: var(--accent-color);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.options label,
+.hobi-options label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: normal;
+}
+
+.hobi-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.hobi-options div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- COLOR & RANGE INPUTS --- */
+.visual-inputs {
+    display: flex;
+    gap: 30px;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 50px;
+    height: 35px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    accent-color: var(--accent-color);
+    width: 150px;
+    cursor: pointer;
+}
+
+/* --- SUBMIT BUTTON --- */
+.submit-btn {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 14px 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-options-row {
+        flex-direction: column;
+    }
+    
+    .visual-inputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

@@ -1,91 +1,115 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="UTF-8">
-        <title>Data Mahasiswa & Latihan Tabel</title>
-    </head>
-    <body>
-        <h1>DAVID BECKHAM</h1>
-        <table border="1" cellspacing="0" cellpadding="10">
-            <tr> 
-                <td><a href="index.html">home</a></td>
-                <td><a href="profile.html">profile</a></td>
-                <td><a href="contact.html">contact</a></td>
-                <td><a href="mahasiswa.html">mahasiswa</a></td>
-            </tr>
-        </table>
-        <br>
-        <hr/>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Beckham | Data Mahasiswa</title>
+    <link rel="stylesheet" href="mahasiswa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="mahasiswa-page">
 
-        <h2>Data Mahasiswa</h2>
-        <a href="tambahdata.html">
-            <button>Tambah  Data</button>
-        </a>
-        <table border="1" cellpadding="10px" cellspacing="0">
-            <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Nama</th>
-                <th rowspan="2">Foto</th>
-                <th colspan="3">NILAI</th>
-            </tr>
-            <tr>
-                <th>UTS</th>
-                <th>UAS</th>
-                <th>TUGAS</th>
-            </tr>
-            <tr>
-                <td align="center">1</td>
-                <td>David</td>
-                <td><img src="assets/images/david2.jpg" width="50px"></td>
-                <td align="center">90</td>
-                <td align="center">95</td>
-                <td align="center">100</td>
-            </tr>
-            <tr>
-                <td align="center">2</td>
-                <td>Ronaldo</td>
-                <td><img src="assets/images/ronaldo.jpg" width="50px"></td>
-                <td align="center">90</td>
-                <td align="center">95</td>
-                <td align="center">100</td>
-            </tr>
-            <tr>
-                <td align="center">3</td>
-                <td>Messi</td>
-                <td><img src="assets/images/Messi.jpg" width="50px"></td>
-                <td align="center">90</td>
-                <td align="center">95</td>
-                <td align="center">100</td>
-            </tr>
-        </table>
+    <div class="container">
+        
+        <header class="site-header">
+            <h1 class="site-title">DAVID BECKHAM</h1>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="contact.html">Contact</a>
+                <a href="mahasiswa.html" class="active">Mahasiswa</a>
+            </nav>
+        </header>
 
-        <br>
-        <hr/>
+        <main class="content-layout">
+            
+            <section class="data-section">
+                <div class="section-header">
+                    <h2 class="section-title">Data Mahasiswa</h2>
+                    <a href="tambahdata.html" class="btn-link">
+                        <button class="add-btn">+ Tambah Data</button>
+                    </a>
+                </div>
 
-        <h2>Latihan</h2>
-        <table border="1" cellpadding="20px" cellspacing="0">
-            <tr align="center">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-            </tr>
-            <tr align="center">
-                <td>12</td>
-                <td colspan="2" rowspan="2" style="font-size: 24px;"><b>MID</b></td>
-                <td>5</td>
-            </tr>
-            <tr align="center">
-                <td>11</td>
-                <td>6</td>
-            </tr>
-            <tr align="center">
-                <td>10</td>
-                <td>9</td>
-                <td>8</td>
-                <td>7</td>
-            </tr>
-        </table>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">No</th>
+                                <th rowspan="2">Nama</th>
+                                <th rowspan="2">Foto</th>
+                                <th colspan="3" class="nilai-header">NILAI</th>
+                            </tr>
+                            <tr>
+                                <th>UTS</th>
+                                <th>UAS</th>
+                                <th>TUGAS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>David</strong></td>
+                                <td><img src="assets/images/david2.jpg" alt="David" class="avatar"></td>
+                                <td>90</td>
+                                <td>95</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Ronaldo</strong></td>
+                                <td><img src="assets/images/ronaldo.jpg" alt="Ronaldo" class="avatar"></td>
+                                <td>90</td>
+                                <td>95</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Messi</strong></td>
+                                <td><img src="assets/images/Messi.jpg" alt="Messi" class="avatar"></td>
+                                <td>90</td>
+                                <td>95</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    </body>
+            <hr class="divider"/>
+
+            <section class="latihan-section">
+                <h2 class="section-title">Latihan Tabel</h2>
+                <div class="latihan-container">
+                    <table class="latihan-table">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td colspan="2" rowspan="2" class="mid-cell">MID</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>8</td>
+                            <td>7</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
 </html>

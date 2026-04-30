@@ -4,101 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Beckham | Profil</title>
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa; 
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border-radius: 8px;
-        }
-
-        .site-header {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-
-        .site-title {
-            font-family: "Playfair Display", "Times New Roman", serif;
-            font-size: 42px;
-            font-weight: normal;
-            color: #111;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .site-nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        .site-nav a {
-            text-decoration: none;
-            color: #777;
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding-bottom: 5px;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-        }
-
-        .site-nav a:hover, .site-nav a.active {
-            color: #000;
-            border-bottom: 2px solid #000;
-        }
-
-        .section-title {
-            font-size: 14px;
-            color: #111;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-        }
-
-
-        ul.profile-list {
-            list-style-type: none;
-            margin-left: 10px;
-        }
-
-        ul.profile-list li {
-            margin-bottom: 15px;
-            font-size: 15px;
-            color: #555;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        ul.profile-list strong {
-            color: #000;
-            font-weight: 600;
-            margin-right: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="profile-page">
 
     <div class="container">
         
@@ -112,29 +21,54 @@
             </nav>
         </header>
 
-        <div class="profile-details">
-            <h2 class="section-title">Biodata Dasar</h2>
-            <ul class="profile-list">
-                <li><strong>Nama Lengkap:</strong> David Robert Joseph Beckham</li>
-                <li><strong>Tanggal Lahir:</strong> 2 Mei 1975 (London, Inggris)</li>
-                <li><strong>Pasangan:</strong> Victoria Beckham (menikah tahun 1999)</li>
-            </ul>
+        <main class="profile-layout">
+            <aside class="profile-visual">
+                <div class="polaroid-frame">
+                    <img src="assets/images/david.jpg" alt="Potret David Beckham" class="profile-img">
+                    <div class="polaroid-caption">London, Est. 1975</div>
+                </div>
+                
+                <div class="quick-facts">
+                    <h3>Identitas</h3>
+                    <ul>
+                        <li><strong>Nama:</strong> David Robert Joseph Beckham</li>
+                        <li><strong>Lahir:</strong> 2 Mei 1975 (London)</li>
+                        <li><strong>Posisi:</strong> Gelandang Kanan</li>
+                        <li><strong>Tinggi:</strong> 1.80 m</li>
+                    </ul>
+                </div>
+            </aside>
 
-            <h2 class="section-title">Karir Sepak Bola</h2>
-            <ul class="profile-list">
-                <li><strong>Klub Utama:</strong> Memulai karir profesionalnya di Manchester United, di mana ia meraih kesuksesan besar dengan memenangkan 6 gelar Liga Premier, 2 Piala FA, dan Liga Champions UEFA pada tahun 1999.</li>
-                <li><strong>Perjalanan Global:</strong> Bermain untuk klub-klub raksasa dunia lainnya seperti Real Madrid (Spanyol), LA Galaxy (Amerika Serikat), AC Milan (Italia), dan menutup karirnya di Paris Saint-Germain (Prancis) sebelum pensiun pada tahun 2013.</li>
-                <li><strong>Timnas Inggris:</strong> Membuat 115 penampilan untuk Tim Nasional Inggris dan menjabat sebagai kapten selama enam tahun.</li>
-                <li><strong>Gaya Bermain:</strong> Dikenal luas sebagai salah satu gelandang terbaik di generasinya, terutama karena akurasi umpan silang dan keahlian tendangan bebas yang melengkung tajam.</li>
-            </ul>
+            <article class="profile-details">
+                <section class="detail-section">
+                    <h2 class="section-title">Narasi Karir</h2>
+                    <p class="narrative-text">
+                        Memulai debut profesionalnya di usia 17 tahun bersama Manchester United, Beckham bukan sekadar pemain; ia adalah konduktor di lapangan tengah. Visi permainannya yang tajam dan eksekusi tendangan bebas yang melengkung menjadikannya legenda "Class of '92". Ia membawa Setan Merah meraih masa keemasannya, termasuk <em>Treble Winner</em> yang epik pada 1999.
+                    </p>
+                    <p class="narrative-text">
+                        Perjalanannya melintasi batas negara, membawanya ke era <em>Galácticos</em> di Real Madrid, mengubah lanskap sepak bola Amerika bersama LA Galaxy, hingga sentuhan akhir yang elegan di AC Milan dan Paris Saint-Germain.
+                    </p>
+                </section>
 
-            <h2 class="section-title">Kehidupan Pasca-Pensiun & Bisnis</h2>
-            <ul class="profile-list">
-                <li><strong>Ikon Global:</strong> Bukan hanya seorang atlet, tetapi juga ikon budaya pop, fashion, dan brand ambassador untuk berbagai merek global ternama.</li>
-                <li><strong>Pemilik Klub:</strong> Saat ini menjabat sebagai Presiden dan salah satu pemilik dari klub sepak bola Inter Miami CF (MLS), serta memiliki saham di klub Inggris, Salford City.</li>
-                <li><strong>Filantropi:</strong> Aktif dalam kegiatan sosial dan telah menjadi Duta Kehormatan UNICEF sejak tahun 2005, dengan fokus membantu anak-anak di seluruh dunia.</li>
-            </ul>
-        </div>
+                <section class="detail-section">
+                    <h2 class="section-title">Di Luar Lapangan</h2>
+                    <div class="cards-grid">
+                        <div class="info-card">
+                            <h3>Ikon Pop Kultur</h3>
+                            <p>Mendefinisikan ulang arti seorang atlet dengan mengawinkan sepak bola, mode kelas atas, dan gaya hidup. Dari gaya rambut yang memicu tren global hingga kampanye mode ikonik.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Visi Inter Miami</h3>
+                            <p>Bertransisi dari pemain menjadi pemilik klub. Sebagai Presiden Inter Miami CF, ia membawa revolusi di Major League Soccer dengan mendatangkan bintang-bintang dunia.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Filantropi</h3>
+                            <p>Sejak 2005, mengabdi sebagai Duta Kehormatan UNICEF. Mendirikan "7: The David Beckham UNICEF Fund" untuk melindungi anak-anak rentan di seluruh dunia.</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
 
     </div>
 
