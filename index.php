@@ -14,10 +14,10 @@
         <header class="site-header">
             <h1 class="site-title">DAVID BECKHAM</h1>
             <nav class="site-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="profile.html">Profile</a>
-                <a href="contact.html">Contact</a>
-                <a href="mahasiswa.html">Mahasiswa</a>
+                <a href="index.php" class="active">Home</a>
+                <a href="profile.php">Profile</a>
+                <a href="contact.php">Contact</a>
+                <a href="mahasiswa.php">Mahasiswa</a>
             </nav>
         </header>
 

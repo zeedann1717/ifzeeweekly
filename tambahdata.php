@@ -14,10 +14,10 @@
         <header class="site-header">
             <h1 class="site-title">DAVID BECKHAM</h1>
             <nav class="site-nav">
-                <a href="index.html">Home</a>
-                <a href="profile.html">Profile</a>
-                <a href="contact.html">Contact</a>
-                <a href="mahasiswa.html">Mahasiswa</a>
+                <a href="index.php">Home</a>
+                <a href="profile.php">Profile</a>
+                <a href="contact.php">Contact</a>
+                <a href="mahasiswa.php">Mahasiswa</a>
             </nav>
         </header>
 
@@ -25,7 +25,7 @@
             
             <section class="form-section">
                 <h2 class="section-title">Tambah Data Nilai</h2>
-                <form action="mahasiswa.html" method="post" class="custom-form">
+                <form action="mahasiswa.php" method="post" class="custom-form">
                     
                     <div class="form-group">
                         <label for="nama">Nama Mahasiswa</label>
@@ -60,7 +60,7 @@
 
             <section class="form-section">
                 <h2 class="section-title">Form Biodata Mahasiswa</h2>
-                <form action="mahasiswa.html" method="post" class="custom-form">
+                <form action="mahasiswa.php" method="post" class="custom-form">
                     
                     <div class="form-row">
                         <div class="form-group">

@@ -14,10 +14,10 @@
         <header class="site-header">
             <h1 class="site-title">DAVID BECKHAM</h1>
             <nav class="site-nav">
-                <a href="index.html">Home</a>
-                <a href="profile.html">Profile</a>
-                <a href="contact.html">Contact</a>
-                <a href="mahasiswa.html" class="active">Mahasiswa</a>
+                <a href="index.php">Home</a>
+                <a href="profile.php">Profile</a>
+                <a href="contact.php">Contact</a>
+                <a href="mahasiswa.php" class="active">Mahasiswa</a>
             </nav>
         </header>
 
@@ -26,7 +26,7 @@
             <section class="data-section">
                 <div class="section-header">
                     <h2 class="section-title">Data Mahasiswa</h2>
-                    <a href="tambahdata.html" class="btn-link">
+                    <a href="tambahdata.php" class="btn-link">
                         <button class="add-btn">+ Tambah Data</button>
                     </a>
                 </div>
