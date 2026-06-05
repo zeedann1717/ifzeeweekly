@@ -1,3 +1,13 @@
+<?php
+
+require "fungsi.php";
+
+$qmahasiswa = "SELECT * FROM mahasiswa";
+$mahasiswas = tampildata($qmahasiswa);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -35,42 +45,57 @@
                     <table class="styled-table">
                         <thead>
                             <tr>
-                                <th rowspan="2">No</th>
-                                <th rowspan="2">Nama</th>
-                                <th rowspan="2">Foto</th>
-                                <th colspan="3" class="nilai-header">NILAI</th>
+                                <th >No</th>
+                                <th >Nama</th>
+                                <th >Nim</th>
+                                <th >Jurusan</th>
+                                <th >Email</th>
+                                <th >No.Hp</th>
+                                <th >Foto</th>
+                                <th >Aksi</th>
                             </tr>
-                            <tr>
-                                <th>UTS</th>
-                                <th>UAS</th>
-                                <th>TUGAS</th>
-                            </tr>
+                            <?php
+                                $i = 1;
+                                foreach($mahasiswas as $mhs)
+                                    {
+                            ?>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td><strong>David</strong></td>
-                                <td><img src="assets/images/david2.jpg" alt="David" class="avatar"></td>
-                                <td>90</td>
-                                <td>95</td>
-                                <td>100</td>
+                                <td align="center"><?=$i?></td>
+                                <td><?= $mhs["nama"]?></td>
+                                <td><?= $mhs["nim"]?></td>
+                                <td><?= $mhs["jurusan"]?></td>
+                                <td><?= $mhs["email"]?></td>
+                                <td><?= $mhs["no_hp"]?></td>
+                                <td><img src="assets/images/<?= $mhs["foto"]?>"alt="foto"width=50px"></td>
+                                <td>
+                                    <a href="editdata.php"><button>Edit</button></a> 
+                                    <a href="deletedata.php"><button>Hapus</button></a> 
+                                </td>    
                             </tr>
-                            <tr>
+                                <?php
+                                    $i++;
+                                    }
+                                ?>
+                            <!-- <tr>
                                 <td>2</td>
-                                <td><strong>Ronaldo</strong></td>
-                                <td><img src="assets/images/ronaldo.jpg" alt="Ronaldo" class="avatar"></td>
-                                <td>90</td>
-                                <td>95</td>
-                                <td>100</td>
+                               <td><strong>David</strong></td>
+                                 <td>123</td>
+                                  <td>infor</td>
+                                   <td>zzz@gmail.com</td>
+                                    <td>089</td>
+                                <td><img src="assets/images/david2.jpg" alt="David" class="avatar"></td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td><strong>Messi</strong></td>
-                                <td><img src="assets/images/Messi.jpg" alt="Messi" class="avatar"></td>
-                                <td>90</td>
-                                <td>95</td>
-                                <td>100</td>
-                            </tr>
+                                <td><strong>David</strong></td>
+                                 <td>123</td>
+                                  <td>infor</td>
+                                   <td>zzz@gmail.com</td>
+                                    <td>089</td>
+                                <td><img src="assets/images/david2.jpg" alt="David" class="avatar"></td>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
