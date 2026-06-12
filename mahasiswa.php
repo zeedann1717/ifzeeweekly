@@ -7,7 +7,6 @@ $mahasiswas = tampildata($qmahasiswa);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -45,22 +44,21 @@ $mahasiswas = tampildata($qmahasiswa);
                     <table class="styled-table">
                         <thead>
                             <tr>
-                                <th >No</th>
-                                <th >Nama</th>
-                                <th >Nim</th>
-                                <th >Jurusan</th>
-                                <th >Email</th>
-                                <th >No.Hp</th>
-                                <th >Foto</th>
-                                <th >Aksi</th>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Nim</th>
+                                <th>Jurusan</th>
+                                <th>Email</th>
+                                <th>No.Hp</th>
+                                <th>Foto</th>
+                                <th>Aksi</th>
                             </tr>
-                            <?php
-                                $i = 1;
-                                foreach($mahasiswas as $mhs)
-                                    {
-                            ?>
                         </thead>
                         <tbody>
+                            <?php
+                                $i = 1;
+                                foreach($mahasiswas as $mhs) {
+                            ?>
                             <tr>
                                 <td align="center"><?=$i?></td>
                                 <td><?= $mhs["nama"]?></td>
@@ -68,34 +66,18 @@ $mahasiswas = tampildata($qmahasiswa);
                                 <td><?= $mhs["jurusan"]?></td>
                                 <td><?= $mhs["email"]?></td>
                                 <td><?= $mhs["no_hp"]?></td>
-                                <td><img src="assets/images/<?= $mhs["foto"]?>"alt="foto"width=50px"></td>
+                                <td><img src="assets/images/<?= $mhs["foto"]?>" alt="foto" width="50px"></td>
                                 <td>
-                                    <a href="editdata.php"><button>Edit</button></a> 
-                                    <a href="deletedata.php"><button>Hapus</button></a> 
+                                    <a href="editdata.php?id=<?= $mhs["id"] ?>"><button>Edit</button></a> 
+                                    <a href="hapusdata.php?id=<?= $mhs["id"] ?>" onclick="return confirm('Yakin mau hapus data <?= $mhs["nama"] ?>?');">
+                                        <button>Hapus</button>
+                                    </a> 
                                 </td>    
                             </tr>
-                                <?php
-                                    $i++;
-                                    }
-                                ?>
-                            <!-- <tr>
-                                <td>2</td>
-                               <td><strong>David</strong></td>
-                                 <td>123</td>
-                                  <td>infor</td>
-                                   <td>zzz@gmail.com</td>
-                                    <td>089</td>
-                                <td><img src="assets/images/david2.jpg" alt="David" class="avatar"></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><strong>David</strong></td>
-                                 <td>123</td>
-                                  <td>infor</td>
-                                   <td>zzz@gmail.com</td>
-                                    <td>089</td>
-                                <td><img src="assets/images/david2.jpg" alt="David" class="avatar"></td>
-                            </tr> -->
+                            <?php
+                                $i++;
+                                }
+                            ?>
                         </tbody>
                     </table>
                 </div>

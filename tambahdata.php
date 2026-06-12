@@ -1,160 +1,162 @@
+<?php
+
+    require "fungsi.php";
+
+    if(isset($_POST["submit"]))
+    {
+        $nama = $_POST["nama"];
+        $nim = $_POST["nim"];
+        $jurusan = $_POST["jurusan"];
+        $email = $_POST["email"];
+        $nohp = $_POST["nohp"]; 
+        $foto = $_POST["foto"];
+
+        $query = "INSERT INTO mahasiswa 
+        (nama,nim,jurusan,email,no_hp,foto) VALUES
+        ('$nama','$nim','$jurusan','$email','$nohp','$foto')";
+        
+        mysqli_query($koneksi, $query);
+
+        if(mysqli_affected_rows($koneksi) > 0) {
+            echo "<script>alert('Data berhasil ditambahkan!');</script>";
+        } else {
+            echo "<script>alert('Data gagal ditambahkan!');</script>";
+        }
+    }    
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Beckham | Tambah Data</title>
-    <link rel="stylesheet" href="tambahdata.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Tambah Data Mahasiswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset margin & padding dasar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8; /* Warna background abu-abu kebiruan yang soft */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container mirip Card */
+        .form-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Efek melayang */
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dcdde1;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        /* Efek nyala saat kotak input diklik */
+        .form-group input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
 </head>
-<body class="tambah-page">
+<body>
 
-    <div class="container">
-        
-        <header class="site-header">
-            <h1 class="site-title">DAVID BECKHAM</h1>
-            <nav class="site-nav">
-                <a href="index.php">Home</a>
-                <a href="profile.php">Profile</a>
-                <a href="contact.php">Contact</a>
-                <a href="mahasiswa.php">Mahasiswa</a>
-            </nav>
-        </header>
+    <div class="form-container">
+        <h2>Tambah Data Mahasiswa</h2>
 
-        <main class="form-layout">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+            </div>
             
-            <section class="form-section">
-                <h2 class="section-title">Tambah Data Nilai</h2>
-                <form action="mahasiswa.php" method="post" class="custom-form">
-                    
-                    <div class="form-group">
-                        <label for="nama">Nama Mahasiswa</label>
-                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="foto">Upload Foto</label>
-                        <input type="file" id="foto" name="foto" class="file-input">
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="uts">Nilai UTS</label>
-                            <input type="number" id="uts" name="uts" placeholder="0 - 100">
-                        </div>
-                        <div class="form-group">
-                            <label for="uas">Nilai UAS</label>
-                            <input type="number" id="uas" name="uas" placeholder="0 - 100">
-                        </div>
-                        <div class="form-group">
-                            <label for="tugas">Nilai Tugas</label>
-                            <input type="number" id="tugas" name="tugas" placeholder="0 - 100">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Simpan Data Nilai</button>
-                </form>
-            </section>
-
-            <hr class="divider">
-
-            <section class="form-section">
-                <h2 class="section-title">Form Biodata Mahasiswa</h2>
-                <form action="mahasiswa.php" method="post" class="custom-form">
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nama_mhs">Nama Lengkap</label>
-                            <input type="text" id="nama_mhs" name="nama_mhs" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nim">NIM</label>
-                            <input type="number" id="nim" name="nim" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password Portal</label>
-                            <input type="password" id="password" name="password">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nohp">No. Handphone</label>
-                            <input type="tel" id="nohp" name="nohp">
-                        </div>
-                        <div class="form-group">
-                            <label for="website">Website / Portofolio</label>
-                            <input type="url" id="website" name="website" placeholder="https://...">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="tgl_lahir">Tanggal Lahir</label>
-                            <input type="date" id="tgl_lahir" name="tgl_lahir">
-                        </div>
-                        <div class="form-group">
-                            <label for="jurusan">Jurusan</label>
-                            <select id="jurusan" name="jurusan">
-                                <option value="">-- Pilih Jurusan --</option>
-                                <option value="Sistem Informasi">Sistem Informasi</option>
-                                <option value="Teknik Informatika">Teknik Informatika</option>
-                                <option value="Kecerdasan Buatan">Kecerdasan Buatan</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="alamat">Alamat Domisili</label>
-                        <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap..."></textarea>
-                    </div>
-
-                    <div class="form-options-row">
-                        <div class="form-group radio-group">
-                            <label>Jenis Kelamin</label>
-                            <div class="options">
-                                <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
-                                <label for="pria">Pria</label>
-                                
-                                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
-                                <label for="wanita">Wanita</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group visual-inputs">
-                            <div>
-                                <label for="warna">Warna Profil</label>
-                                <input type="color" id="warna" name="warna" value="#d4af37">
-                            </div>
-                            <div>
-                                <label for="kepuasan">Tingkat Kepuasan</label>
-                                <input type="range" id="kepuasan" name="kepuasan" min="1" max="100">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group checkbox-group">
-                        <label>Hobi / Minat</label>
-                        <div class="hobi-options">
-                            <div><input type="checkbox" id="hobi1" name="hobi" value="Membaca"><label for="hobi1">Membaca</label></div>
-                            <div><input type="checkbox" id="hobi2" name="hobi" value="Olahraga"><label for="hobi2">Olahraga</label></div>
-                            <div><input type="checkbox" id="hobi3" name="hobi" value="Bermain Musik"><label for="hobi3">Bermain Musik</label></div>
-                            <div><input type="checkbox" id="hobi4" name="hobi" value="Gaming"><label for="hobi4">Gaming</label></div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Kirim Biodata</button>
-                </form>
-            </section>
-
-        </main>
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="jurusan">Jurusan</label>
+                <input type="text" id="jurusan" name="jurusan" placeholder="Masukkan jurusan" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="contoh@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nohp">No. Handphone</label>
+                <input type="text" id="nohp" name="nohp" placeholder="08xxxxxxxxxx" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="foto">Nama File Foto</label>
+                <input type="text" id="foto" name="foto" placeholder="foto_profil.jpg" required>
+            </div>
+            
+            <button type="submit" name="submit" class="btn-submit">Simpan Data</button>
+        </form>
     </div>
 
 </body>
